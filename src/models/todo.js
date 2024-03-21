@@ -7,6 +7,7 @@ class Todo {
   #priority;
   #isComplete = false;
   #notes;
+  #checklist = [];
   constructor(title, description, duedate, priority, notes) {
     this.#title = title;
     this.#description = description;
@@ -61,6 +62,13 @@ class Todo {
 
   get getNotes() {
     return this.#notes;
+  }
+
+  addChecklist(checklist){ 
+    this.#checklist.push(checklist);
+  }
+  get getCheckList(){
+    return this.#checklist;
   }
 
   logTodo() {
