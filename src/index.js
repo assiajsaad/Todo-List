@@ -1,3 +1,8 @@
 import './style.css';
+import { data } from './data';
 
-console.log("First Log");
+
+
+console.log(data);
+
+
