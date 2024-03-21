@@ -1,17 +1,55 @@
 import { Project } from "./models/project";
 import { Todo } from "./models/todo";
+import { logMessage } from "./models/logger";
 
-const defaultProj = new Project(
-  "Default Project",
-  "Default Description",
-  "Nov 5"
-);
-const defaultTodo = new Todo("Default Todo", "Default Task", "Sep 12", 1, "");
+function Data() {
+  const data = [];
 
-defaultProj.addTodo(defaultTodo);
+  function defaultData() {
+    const defaultProj = new Project(
+      "Default Project",
+      "Default Description",
+      "Nov 5"
+    );
+    const defaultTodo = new Todo(
+      "Default Todo",
+      "Default Task",
+      "Sep 12",
+      1,
+      ""
+    );
 
-const data = [];
+    defaultProj.addTodo(defaultTodo);
 
-data.push(defaultProj);
+    data.push(defaultProj);
+  }
 
-export { data };
+  function printData() {
+    logMessage(data);
+  }
+
+  function getData(){
+    return data;
+  }
+
+  function addProject(project){
+    data.push(project);
+  }
+
+  function writeToLocalStorage() {
+    
+  }
+  function retrieveFromLocalStorage() {
+
+  }
+
+  defaultData();
+
+  return {
+    printData,
+    getData,
+    addProject
+  };
+}
+
+export { Data };

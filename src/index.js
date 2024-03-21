@@ -1,8 +1,5 @@
 import './style.css';
-import { data } from './data';
+import { Data } from './data';
 
-
-
-console.log(data);
-
-
+const data = new Data();
+data.printData();
