@@ -29,7 +29,7 @@ function Data() {
   }
 
   function getData(){
-    return data;
+    return [...data];
   }
 
   function addProject(project){
