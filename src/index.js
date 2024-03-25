@@ -3,7 +3,9 @@ import { Data } from './data';
 import { renderProject } from './components/content';
 
 const data = new Data();
-data.printData();
+
+
+console.log("data[0]: " +data.getProjectByIndex(0));
 
 renderProject();
 

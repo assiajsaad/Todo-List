@@ -43,12 +43,19 @@ function Data() {
 
   }
 
+  function getProjectByIndex(index) {
+    const proj = { ...data[index] };
+    return proj;
+}
+
+
   defaultData();
 
   return {
     printData,
     getData,
-    addProject
+    addProject,
+    getProjectByIndex
   };
 }
 
