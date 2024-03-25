@@ -48,7 +48,7 @@ class Project {
     logMessage(
       `Title: ${this.#title}, Description: ${this.#description}, Deadline: ${
         this.#deadline
-      }, Todo: ${this.#todoList}`
+      }, Todo: ${this.#todoList.logTodo}`
     );
   }
 }

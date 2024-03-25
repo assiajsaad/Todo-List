@@ -15,7 +15,7 @@ function showProject(index) {
   title.textContent = dataArray[index].getTitle;
   description.textContent = dataArray[index].getDescription;
   deadline.textContent = dataArray[index].getDeadline;
-  todo.textContent = "Render todo via todo.js";
+  todo.textContent = dataArray[index].getTodo;
 
   // data[index].todoList.map((item)=>{
   //     render todo via todo.js
@@ -25,7 +25,7 @@ function showProject(index) {
   project.appendChild(description);
   project.appendChild(deadline);
   project.appendChild(todo);
-  console.log(`Project: ${project}`);
+
   return project;
 }
 

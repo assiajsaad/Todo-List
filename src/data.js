@@ -1,6 +1,7 @@
 import { Project } from "./models/project";
 import { Todo } from "./models/todo";
 import { logMessage } from "./models/logger";
+import _ from 'lodash';
 
 function Data() {
   const data = [];
@@ -44,7 +45,7 @@ function Data() {
   }
 
   function getProjectByIndex(index) {
-    const proj = { ...data[index] };
+    const proj = data[index];
     return proj;
 }
 
