@@ -36,7 +36,7 @@ class Project {
     return this.#deadline;
   }
 
-  get getTodoList() {
+  get getTodos() {
     return this.#todoList;
   }
 
@@ -45,10 +45,11 @@ class Project {
   }
 
   logProject() {
+    const todos = this.#todoList.map(todo => {
+      return `\n\tTitle: ${todo.getTitle}, Description: ${todo.getDescription}, Duedate: ${todo.getDuedate}, Priority: ${todo.getPriority}, Completed: ${todo.getIsComplete}, Notes: ${todo.getNotes}`;
+    }).join('');
     logMessage(
-      `Title: ${this.#title}, Description: ${this.#description}, Deadline: ${
-        this.#deadline
-      }, Todo: ${this.#todoList.logTodo}`
+      `Title: ${this.#title}, Description: ${this.#description}, Deadline: ${this.#deadline}, Todos:${todos}`
     );
   }
 }

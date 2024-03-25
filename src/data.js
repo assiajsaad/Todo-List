@@ -1,12 +1,16 @@
 import { Project } from "./models/project";
 import { Todo } from "./models/todo";
 import { logMessage } from "./models/logger";
-import _ from 'lodash';
+import _ from "lodash";
 
-function Data() {
-  const data = [];
+class Data {
+  #data;
+  constructor() {
+    this.#data = [];
+    this.defaultData();
+  }
 
-  function defaultData() {
+  defaultData() {
     const defaultProj = new Project(
       "Default Project",
       "Default Description",
@@ -22,42 +26,28 @@ function Data() {
 
     defaultProj.addTodo(defaultTodo);
 
-    data.push(defaultProj);
+    this.#data.push(defaultProj);
   }
 
-  function printData() {
-    logMessage(data);
+  printData() {
+    logMessage(this.#data);
   }
 
-  function getData(){
-    return [...data];
+  getData() {
+    return [...this.#data];
   }
 
-  function addProject(project){
-    data.push(project);
+  addProject(project) {
+    this.#data.push(project);
   }
 
-  function writeToLocalStorage() {
-    
-  }
-  function retrieveFromLocalStorage() {
+  writeToLocalStorage() {}
+  retrieveFromLocalStorage() {}
 
-  }
-
-  function getProjectByIndex(index) {
-    const proj = data[index];
+  getProjectByIndex(index) {
+    const proj = this.#data[index];
     return proj;
-}
-
-
-  defaultData();
-
-  return {
-    printData,
-    getData,
-    addProject,
-    getProjectByIndex
-  };
+  }
 }
 
 export { Data };
