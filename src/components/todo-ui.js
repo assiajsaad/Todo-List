@@ -3,12 +3,11 @@ function showTodo(proj) {
     todoDiv.classList.add('todo-content');
     const todos = proj.getTodos;
 
-    // todos.array.map((item,index) => {
-    //     const todo =  todoItem(item,index);
-    //     todoDiv.appendChild(todo);
-    // });
-
-    console.log("Todosss "+todos);
+    todos.map((item,index) => {
+        const todo =  todoItem(item,index);
+        todoDiv.appendChild(todo);
+    });
+    
     return todoDiv
 }
 
@@ -28,7 +27,7 @@ function todoItem(todo,index){
     priority.classList.add('todo-priority');
     isComplete.classList.add('todo-iscomplete');
 
-    title.textContent = todo.getTitle;
+    title.textContent = "Title: "+todo.getTitle;
     description.textContent = todo.getDecription;
     duedate.textContent = todo.getDuedate;
     priority.textContent = todo.getPriority;

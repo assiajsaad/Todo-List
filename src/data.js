@@ -23,8 +23,17 @@ class Data {
       1,
       ""
     );
+    const defaultTodo2 = new Todo(
+      "Second default Todo",
+      "Second default Task",
+      "Nov 10",
+      2,
+      ""
+    );
+
 
     defaultProj.addTodo(defaultTodo);
+    defaultProj.addTodo(defaultTodo2);
 
     this.#data.push(defaultProj);
   }
