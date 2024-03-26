@@ -37,7 +37,7 @@ class Project {
   }
 
   get getTodos() {
-    return this.#todoList;
+    return  {...this.#todoList};
   }
 
   addTodo(todo) {

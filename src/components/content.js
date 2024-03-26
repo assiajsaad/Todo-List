@@ -3,10 +3,10 @@ import { showProject } from "./project-ui";
 
 
 
-function renderProject() {
+function renderProject(proj) {
     
     const contentDiv = document.querySelector('.content');
-    contentDiv.appendChild(showProject(0));
+    contentDiv.appendChild(showProject(proj));
 }
 
 export {

@@ -1,21 +1,15 @@
-import { Data } from "../data";
 
-const data = new Data();
-const dataArray = data.getData();
-
-console.log(`Data from project.js ${data}`);
-
-function showProject(index) {
+function showProject(proj) {
   const project = document.createElement("div");
   const title = document.createElement("div");
   const description = document.createElement("div");
   const deadline = document.createElement("div");
   const todo = document.createElement("div");
 
-  title.textContent = dataArray[index].getTitle;
-  description.textContent = dataArray[index].getDescription;
-  deadline.textContent = dataArray[index].getDeadline;
-  todo.textContent = dataArray[index].getTodo;
+  title.textContent = proj.getTitle;
+  description.textContent = proj.getDescription;
+  deadline.textContent = proj.getDeadline;
+  todo.textContent = proj.getTodos;
 
   // data[index].todoList.map((item)=>{
   //     render todo via todo.js

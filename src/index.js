@@ -3,10 +3,9 @@ import { Data } from './data';
 import { renderProject } from './components/content';
 
 const data = new Data();
-data.printData();
-const object = data.getProjectByIndex(0);
+const obj = data.getProjectByIndex(0);
+obj.logProject();
+console.log("Todo " + obj.getTodos);
 
-object.logProject();
-
-renderProject();
+renderProject(obj);
 
