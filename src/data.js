@@ -31,7 +31,7 @@ class Data {
       ""
     );
 
-
+      defaultTodo2.setIsComplete= true;
     defaultProj.addTodo(defaultTodo);
     defaultProj.addTodo(defaultTodo2);
 

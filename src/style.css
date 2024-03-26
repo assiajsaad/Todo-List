@@ -42,4 +42,9 @@ ul > * {
 .todo-item {
   display:flex;
   gap: 5%;
+  padding: 1%;
+}
+
+.todo-title{
+  margin-right: auto;
 }

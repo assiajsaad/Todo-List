@@ -19,7 +19,7 @@ function todoItem(todo,index){
     const description = document.createElement('div');
     const duedate = document.createElement('div');
     const priority = document.createElement('div');
-    const isComplete = document.createElement('div');
+    const isComplete = document.createElement('input');
     
     title.classList.add('todo-title');
     description.classList.add('todo-description');
@@ -31,7 +31,13 @@ function todoItem(todo,index){
     description.textContent = todo.getDecription;
     duedate.textContent = todo.getDuedate;
     priority.textContent = todo.getPriority;
-    isComplete.textContent = todo.getIsComplete;
+    // isComplete.textContent = todo.getIsComplete;
+    isComplete.type= 'checkbox';
+    // isComplete.value = true;
+    isComplete.checked = todo.getIsComplete;
+    console.log(`Todo is complete: ${todo.isComplete}`);
+    // isComplete.checked = false;
+
 
     item.appendChild(title);
     item.appendChild(description);
