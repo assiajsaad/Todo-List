@@ -4,21 +4,19 @@ function showProject(proj) {
   const title = document.createElement("div");
   const description = document.createElement("div");
   const deadline = document.createElement("div");
-  const todo = document.createElement("div");
 
   title.textContent = proj.getTitle;
+  title.classList.add('project-title');
   description.textContent = proj.getDescription;
+  description.classList.add('project-description');
   deadline.textContent = proj.getDeadline;
-  todo.textContent = proj.getTodos;
-
-  // data[index].todoList.map((item)=>{
-  //     render todo via todo.js
-  // });
+  deadline.classList.add('project-deadline');
+  
 
   project.appendChild(title);
   project.appendChild(description);
   project.appendChild(deadline);
-  project.appendChild(todo);
+  project.classList.add('project-content');
 
   return project;
 }

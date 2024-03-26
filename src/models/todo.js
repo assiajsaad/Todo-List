@@ -28,7 +28,7 @@ class Todo {
     this.#description = description;
   }
 
-  get getDesciption() {
+  get getDescription() {
     return this.#description;
   }
 
