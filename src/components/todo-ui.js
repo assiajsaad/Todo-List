@@ -20,6 +20,9 @@ function todoItem(todo,index){
     const duedate = document.createElement('div');
     const priority = document.createElement('div');
     const isComplete = document.createElement('input');
+    const editBtn = document.createElement('button');
+    const deleteBtn = document.createElement('button');
+    const detailsBtn = document.createElement('button');
     
     title.classList.add('todo-title');
     description.classList.add('todo-description');
@@ -27,16 +30,18 @@ function todoItem(todo,index){
     priority.classList.add('todo-priority');
     isComplete.classList.add('todo-iscomplete');
 
-    title.textContent = "Title: "+todo.getTitle;
+    title.textContent = todo.getTitle;
     description.textContent = todo.getDecription;
     duedate.textContent = todo.getDuedate;
     priority.textContent = todo.getPriority;
-    // isComplete.textContent = todo.getIsComplete;
     isComplete.type= 'checkbox';
-    // isComplete.value = true;
     isComplete.checked = todo.getIsComplete;
-    console.log(`Todo is complete: ${todo.isComplete}`);
-    // isComplete.checked = false;
+    editBtn.textContent = 'Edit';
+    editBtn.classList.add(index);
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.classList.add(index);
+    detailsBtn.textContent = 'Details';
+    detailsBtn.classList.add(index);
 
 
     item.appendChild(title);
@@ -44,6 +49,9 @@ function todoItem(todo,index){
     item.appendChild(duedate);
     item.appendChild(priority);
     item.appendChild(isComplete);
+    item.appendChild(detailsBtn);
+    item.appendChild(editBtn);
+    item.appendChild(deleteBtn);
 
     return item;
 

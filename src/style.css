@@ -48,3 +48,7 @@ ul > * {
 .todo-title{
   margin-right: auto;
 }
+
+.todo-iscomplete {
+  order: -1;
+}
