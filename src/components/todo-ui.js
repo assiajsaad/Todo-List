@@ -35,12 +35,16 @@ function todoItem(todo,index){
     duedate.textContent = todo.getDuedate;
     priority.textContent = todo.getPriority;
     isComplete.type= 'checkbox';
+    isComplete.name='isComplete';
     isComplete.checked = todo.getIsComplete;
     editBtn.textContent = 'Edit';
+    editBtn.name = 'edit';
     editBtn.classList.add(index);
     deleteBtn.textContent = 'Delete';
+    deleteBtn.name = 'delete';
     deleteBtn.classList.add(index);
     detailsBtn.textContent = 'Details';
+    detailsBtn.name = 'details';
     detailsBtn.classList.add(index);
 
 
