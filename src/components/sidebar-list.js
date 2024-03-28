@@ -3,14 +3,19 @@ function showSidebar(data) {
   const titleList = document.createElement("ul");
   const lastChild = titleDiv.lastElementChild;
 
+
   if (lastChild !== null) {
     titleDiv.removeChild(lastChild);
   }
+
+
 
   data.map((proj, index) => {
     const title = document.createElement("li");
     title.textContent = proj.getTitle;
     title.classList.add(index);
+    title.classList.add('project-title');
+
     titleList.appendChild(title);
   });
 

@@ -31,12 +31,18 @@ class Data {
       ""
     );
 
+    const proj = new Project(
+      "Project",
+      "Description",
+      "Sep 5"
+    );
       defaultTodo2.setIsComplete= true;
       defaultProj.addTodo(defaultTodo2);
       defaultProj.addTodo(defaultTodo);
       defaultProj.addTodo(defaultTodo);
 
     this.#data.push(defaultProj);
+    this.#data.push(proj);
   }
 
   printData() {
