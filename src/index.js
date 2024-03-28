@@ -2,6 +2,7 @@ import './style.css';
 import { Data } from './data';
 import { renderProject } from './components/content';
 import { showSidebar } from './components/sidebar-list';
+import { todoDetails } from './components/todo-details';
 
 const data = new Data();
 let obj = data.getProjectByIndex(0);
@@ -13,7 +14,7 @@ renderProject(obj);
 
 document.body.addEventListener('click',(event)=>{
     const target = event.target;
-    
+
     switch (target.classList[1]) {
         case 'project-title':
             obj = data.getProjectByIndex(target.classList[0]);
@@ -30,7 +31,9 @@ document.body.addEventListener('click',(event)=>{
             console.log(`Edit Todo ${target.classList[0]}`);
             break;
         case 'details':
-            console.log(`Show todo details ${target.classList[0]}`);
+          const  toDets = obj.getTodoByIndex(target.classList[0]);
+            const details = todoDetails(toDets);
+            console.log(details);
             
             break;
         case 'delete':

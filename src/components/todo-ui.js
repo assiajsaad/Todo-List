@@ -28,7 +28,7 @@ function todoItem(todo, index) {
   const editBtn = document.createElement("button");
   const deleteBtn = document.createElement("button");
   const detailsBtn = document.createElement("button");
-  const dialog = todoDialog(todo);
+//   const dialog = todoDialog(todo);
 
   title.classList.add("todo-title");
   description.classList.add("todo-description");
@@ -61,40 +61,9 @@ function todoItem(todo, index) {
   item.appendChild(detailsBtn);
   item.appendChild(editBtn);
   item.appendChild(deleteBtn);
-  item.appendChild(dialog);
+//   item.appendChild(dialog);
 
   return item;
-}
-
-function todoDialog(todo) {
-  const dialog = document.createElement("dialog");
-  dialog.classList.add("todo-dialog");
-
-  const closeBtn = document.createElement("button");
-  closeBtn.classList.add("closebtn");
-  closeBtn.textContent = "x";
-
-  const title = document.createElement("div");
-  const description = document.createElement("div");
-  const duedate = document.createElement("div");
-  const priority = document.createElement("div");
-  const isComplete = document.createElement("input");
-
-  title.textContent = todo.getTitle;
-  description.textContent = todo.getDecription;
-  duedate.textContent = todo.getDuedate;
-  priority.textContent = todo.getPriority;
-  isComplete.type = "checkbox";
-  isComplete.name = "isComplete";
-  isComplete.checked = todo.getIsComplete;
-
-  dialog.appendChild(title);
-  dialog.appendChild(description);
-  dialog.appendChild(duedate);
-  dialog.appendChild(priority);
-  dialog.appendChild(isComplete);
-
-  return dialog;
 }
 
 export { showTodo };
