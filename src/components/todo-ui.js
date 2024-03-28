@@ -3,6 +3,11 @@ function showTodo(proj) {
   todoDiv.classList.add("todo-content");
   const todos = proj.getTodos;
 
+    while (todoDiv.firstElementChild) {
+        todoDiv.removeChild(todoDiv.firstElementChild);
+    }
+
+
   todos.map((item, index) => {
     const todo = todoItem(item, index);
     todoDiv.appendChild(todo);

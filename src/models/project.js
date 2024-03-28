@@ -44,6 +44,10 @@ class Project {
     this.#todoList.push(todo);
   }
 
+  deleteTodo(index){
+    this.#todoList.splice(index,1);
+  }
+
   logProject() {
     const todos = this.#todoList.map(todo => {
       return `\n\tTitle: ${todo.getTitle}, Description: ${todo.getDescription}, Duedate: ${todo.getDuedate}, Priority: ${todo.getPriority}, Completed: ${todo.getIsComplete}, Notes: ${todo.getNotes}`;
