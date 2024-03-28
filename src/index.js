@@ -13,6 +13,7 @@ renderProject(obj);
 
 document.body.addEventListener('click',(event)=>{
     const target = event.target;
+    
     switch (target.classList[1]) {
         case 'project-title':
             obj = data.getProjectByIndex(target.classList[0]);
@@ -23,10 +24,7 @@ document.body.addEventListener('click',(event)=>{
         default:
             break;
     }
-})
 
-document.body.addEventListener('click',(event)=>{
-    const target = event.target;
     switch (target.name) {
         case 'edit':
             console.log(`Edit Todo ${target.classList[0]}`);
@@ -48,8 +46,12 @@ document.body.addEventListener('click',(event)=>{
           
         console.log(`Change complete status ${target.classList}`);
             break;
+        case 'new-project':
+          
+        console.log(`New Project ${target.classList}`);
+            break;
     
         default:
             break;
     }
-  })
+})
