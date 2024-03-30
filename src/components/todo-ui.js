@@ -33,7 +33,9 @@ function todoItem(todo, index) {
   title.classList.add("todo-title");
   description.classList.add("todo-description");
   duedate.classList.add("todo-duedate");
+  priority.classList.add(index);
   priority.classList.add("todo-priority");
+  isComplete.classList.add(index);
   isComplete.classList.add("todo-iscomplete");
 
   title.textContent = todo.getTitle;

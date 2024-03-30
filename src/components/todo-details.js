@@ -1,5 +1,4 @@
 function todoDetails(todo) {
-  console.log("Todo details: "+todo.getTitle);
     const dialog = document.createElement("dialog");
     dialog.classList.add("todo-dialog");
   

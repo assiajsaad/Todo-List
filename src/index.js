@@ -46,8 +46,10 @@ document.body.addEventListener('click',(event)=>{
         console.log(`Create new todo ${target.classList[0]}`);
             break;
         case 'isComplete':
-          
-        console.log(`Change complete status ${target.classList}`);
+            const todo = obj.getTodoByIndex(target.classList[0]);
+            console.log(`stat: ${todo.getIsComplete}`);
+        todo.setIsComplete = !todo.getIsComplete;
+        obj.logProject();
             break;
         case 'new-project':
           
