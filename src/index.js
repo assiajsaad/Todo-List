@@ -35,7 +35,19 @@ document.body.addEventListener('click',(event)=>{
             const todoDetailsDialog = todoDetails(toDets);
             console.log(todoDetailsDialog);
             todoDetailsDialog.setAttribute('open', 'true');
-            document.body.appendChild(todoDetailsDialog);
+
+           const dialogExist = document.querySelector('.dialog');
+            if(dialogExist == null){
+                document.body.appendChild(todoDetailsDialog); 
+            }else {
+                document.body.removeChild(dialogExist);
+                document.body.appendChild(todoDetailsDialog); 
+
+            }
+
+
+
+           
             break;
         case 'delete':
             obj.deleteTodo(target.classList[0]);

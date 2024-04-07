@@ -1,6 +1,7 @@
 function todoDetails(todo) {
     const dialog = document.createElement("dialog");
     dialog.classList.add("todo-dialog");
+    dialog.classList.add("dialog");
   
     const closeBtn = document.createElement("button");
     closeBtn.classList.add("close-dialog");
