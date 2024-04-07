@@ -5,12 +5,14 @@ function todoDetails(todo) {
     const closeBtn = document.createElement("button");
     closeBtn.classList.add("close-dialog");
     closeBtn.textContent = "x";
+    closeBtn.name = 'close-dialog';
   
     const title = document.createElement("div");
     const description = document.createElement("div");
     const duedate = document.createElement("div");
     const priority = document.createElement("div");
     const isComplete = document.createElement("input");
+
 
   title.classList.add('todo-details-title');
   description.classList.add('todo-details-description');
@@ -32,6 +34,7 @@ function todoDetails(todo) {
     dialog.appendChild(duedate);
     dialog.appendChild(priority);
     dialog.appendChild(isComplete);
+    dialog.appendChild(closeBtn);
   
     return dialog;
   }

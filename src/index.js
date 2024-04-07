@@ -32,9 +32,10 @@ document.body.addEventListener('click',(event)=>{
             break;
         case 'details':
           const  toDets = obj.getTodoByIndex(target.classList[0]);
-            const details = todoDetails(toDets);
-            console.log(details);
-            
+            const todoDetailsDialog = todoDetails(toDets);
+            console.log(todoDetailsDialog);
+            todoDetailsDialog.setAttribute('open', 'true');
+            document.body.appendChild(todoDetailsDialog);
             break;
         case 'delete':
             obj.deleteTodo(target.classList[0]);
@@ -54,6 +55,10 @@ document.body.addEventListener('click',(event)=>{
         case 'new-project':
           
         console.log(`New Project ${target.classList}`);
+            break;
+        case 'close-dialog':
+
+            document.body.removeChild(target.parentNode);
             break;
     
         default:
