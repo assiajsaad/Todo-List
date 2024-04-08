@@ -3,6 +3,7 @@ import { Data } from "./data";
 import { renderProject } from "./components/content";
 import { showSidebar } from "./components/sidebar-list";
 import { todoDetails } from "./components/todo-details";
+import { todoEdit } from "./components/todo-edit";
 import { dialogHandler } from "./components/dialog-handler";
 
 const data = new Data();
@@ -28,7 +29,10 @@ document.body.addEventListener("click", (event) => {
 
   switch (target.name) {
     case "edit":
-      console.log(`Edit Todo ${target.classList[0]}`);
+      const todEdit = obj.getTodoByIndex(target.classList[0]);
+      const todoEditDialog = todoEdit(todEdit);
+
+      dialogHandler(todoEditDialog);
       break;
     case "details":
       const toDets = obj.getTodoByIndex(target.classList[0]);
