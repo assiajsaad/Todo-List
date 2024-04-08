@@ -36,7 +36,8 @@ function todoDetails(todo) {
     dialog.appendChild(priority);
     dialog.appendChild(isComplete);
     dialog.appendChild(closeBtn);
-  
+
+    dialog.setAttribute("open", "true");
     return dialog;
   }
 
